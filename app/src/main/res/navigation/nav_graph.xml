@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_initialPage"
+            app:destination="@id/InitialPage" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -24,5 +27,32 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/HomePage"
+        android:name="com.example.spotifydesign.HomePage"
+        android:label="HomePage"
+        tools:layout="@layout/fragment_home_page">
+
+        <action
+            android:id="@+id/action_LoginsFragment_to_HomePage"
+            app:destination="@id/HomePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/LoginsFragment"
+        android:name="com.example.spotifydesign.ui.login.LoginsFragment"
+        android:label="LoginsFragment"
+        tools:layout="@layout/fragment_logins">
+
+        <action
+            android:id="@+id/action_InitialPage_to_LoginsFragment"
+            app:destination="@id/LoginsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/InitialPage"
+        android:name="com.example.spotifydesign.InitialPage"
+        android:label="InitialPage"
+        tools:layout="@layout/fragment_initial_page">
     </fragment>
 </navigation>
